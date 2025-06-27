@@ -1,3 +1,4 @@
+# Ejercicio Vicente Vega
 asientos_disponibles = [1, 2, 3, 4, 5]
 registro_pasajes = {}
 def mostrar_menu():
