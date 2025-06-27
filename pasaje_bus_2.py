@@ -21,6 +21,7 @@ while True:
         if rut in registro_pasajes:
             print("Este RUT ya tiene un pasaje registrado.")
             continue
+         # Ejercicio Claudio Escudero   
         try:
             asiento = int(input("Ingrese número de asiento a comprar: "))
             if asiento in asientos_disponibles:
