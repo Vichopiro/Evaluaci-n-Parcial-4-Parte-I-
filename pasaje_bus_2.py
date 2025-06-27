@@ -8,6 +8,7 @@ def mostrar_menu():
     print("4.- Salir")
 while True:
     mostrar_menu()
+    #Ejercicio Karla Miranda
     opcion = input("Seleccione una opción: ")
     if opcion == "1":
         print(f"Asientos disponibles: {asientos_disponibles}")
