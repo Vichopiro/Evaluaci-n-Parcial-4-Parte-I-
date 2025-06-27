@@ -18,6 +18,7 @@ while True:
         rut = input("Ingrese su RUT: ")
         if rut in registro_pasajes:
             print("Este RUT ya tiene un pasaje registrado.")
+            continue
         try:
             asiento = int(input("Ingrese número de asiento a comprar: "))
             if asiento in asientos_disponibles:
@@ -28,7 +29,7 @@ while True:
                 print("Asiento no disponible.")
         except ValueError:
             print("Debe ingresar un número válido.")
-             elif opcion == "3":
+    elif opcion == "3":
         if not registro_pasajes:
             print("No hay pasajeros registrados.")
         else:
@@ -38,3 +39,5 @@ while True:
     elif opcion == "4":
         print("Gracias por usar PasajeBus.")
         break
+    else:
+        print("Opción no válida. Intente nuevamente.")
