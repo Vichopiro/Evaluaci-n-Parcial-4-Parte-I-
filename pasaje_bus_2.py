@@ -18,3 +18,14 @@ while True:
         rut = input("Ingrese su RUT: ")
         if rut in registro_pasajes:
             print("Este RUT ya tiene un pasaje registrado.")
+        
+        try:
+            asiento = int(input("Ingrese número de asiento a comprar: "))
+            if asiento in asientos_disponibles:
+                registro_pasajes[rut] = asiento
+                asientos_disponibles.remove(asiento)
+                print(f"Asiento {asiento} comprado con éxito.")
+            else:
+                print("Asiento no disponible.")
+        except ValueError:
+            print("Debe ingresar un número válido.")
