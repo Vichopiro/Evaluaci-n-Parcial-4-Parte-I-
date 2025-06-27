@@ -32,6 +32,7 @@ while True:
                 print("Asiento no disponible.")
         except ValueError:
             print("Debe ingresar un número válido.")
+            # Ejercicio Javiera Valdes
     elif opcion == "3":
         if not registro_pasajes:
             print("No hay pasajeros registrados.")
