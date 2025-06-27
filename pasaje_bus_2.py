@@ -9,7 +9,7 @@ def mostrar_menu():
     print("4.- Salir")
 while True:
     mostrar_menu()
-    #Ejercicio Karla Miranda
+    # Ejercicio Karla Miranda
     opcion = input("Seleccione una opción: ")
     if opcion == "1":
         print(f"Asientos disponibles: {asientos_disponibles}")
@@ -17,11 +17,14 @@ while True:
         if len(asientos_disponibles) == 0:
             print("No hay asientos disponibles.")
             continue
-        rut = input("Ingrese su RUT: ")
+        rut = input("Ingrese su RUT (9 dígitos, sin puntos ni guión): ")
+        if len(rut) != 9 or not rut.isdigit():
+            print("RUT inválido. Debe tener exactamente 9 dígitos numéricos.")
+            continue
         if rut in registro_pasajes:
             print("Este RUT ya tiene un pasaje registrado.")
             continue
-         # Ejercicio Claudio Escudero   
+        # Ejercicio Claudio Escudero   
         try:
             asiento = int(input("Ingrese número de asiento a comprar: "))
             if asiento in asientos_disponibles:
